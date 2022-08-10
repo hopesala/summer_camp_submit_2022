@@ -1,0 +1,56 @@
+INFO: [HLS 200-10] Running 'G:/Xilinx/Vitis_HLS/2021.2/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user '123' on host 'desktop-a4ltb0v' (Windows NT_amd64 version 6.2) on Wed Aug 10 13:39:59 +0800 2022
+INFO: [HLS 200-10] In directory 'G:/Doctor/AMD_AECG_Summer_School_Projects-main/fast'
+Sourcing Tcl script 'G:/Doctor/AMD_AECG_Summer_School_Projects-main/fast/SummerCamp/solution1/csynth.tcl'
+INFO: [HLS 200-1510] Running: open_project SummerCamp 
+INFO: [HLS 200-10] Opening project 'G:/Doctor/AMD_AECG_Summer_School_Projects-main/fast/SummerCamp'.
+INFO: [HLS 200-1510] Running: set_top main 
+INFO: [HLS 200-1510] Running: add_files fast.cpp 
+INFO: [HLS 200-10] Adding design file 'fast.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files fast.h 
+INFO: [HLS 200-10] Adding design file 'fast.h' to the project
+INFO: [HLS 200-1510] Running: add_files fast_test.cpp 
+INFO: [HLS 200-10] Adding design file 'fast_test.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb fast_test.cpp 
+INFO: [HLS 200-10] Adding test bench file 'fast_test.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution 'G:/Doctor/AMD_AECG_Summer_School_Projects-main/fast/SummerCamp/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu5p-flva2104-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xcvu5p-flva2104-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.022 seconds; current allocated memory: 1.234 GB.
+INFO: [HLS 200-10] Analyzing design file 'fast_test.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'fast.cpp' ... 
+WARNING: [HLS 207-5287] unused parameter 'img_in' (fast.cpp:6:24)
+WARNING: [HLS 207-5287] unused parameter 'threshold' (fast.cpp:6:36)
+WARNING: [HLS 207-5287] unused parameter 'img_out' (fast.cpp:6:54)
+WARNING: [HLS 207-5287] unused parameter 'rows' (fast.cpp:6:67)
+WARNING: [HLS 207-5287] unused parameter 'cols' (fast.cpp:6:77)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 7.082 seconds; current allocated memory: 1.234 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+ERROR: [HLS 214-194] in function 'main': Undefined function fopen (fast_test.cpp:23:17)
+ERROR: [HLS 214-194] in function 'main': Undefined function fopen (fast_test.cpp:24:18)
+ERROR: [HLS 214-194] in function 'main': Undefined function fscanf (fast_test.cpp:28:9)
+ERROR: [HLS 214-194] in function 'main': Undefined function fscanf (fast_test.cpp:38:9)
+ERROR: [HLS 214-194] in function 'main': Undefined function fclose (fast_test.cpp:45:5)
+ERROR: [HLS 214-194] in function 'main': Undefined function fclose (fast_test.cpp:46:5)
+ERROR: [HLS 214-135] Syn check fail!
+ERROR: [HLS 200-1715] Encountered problem during source synthesis
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 12.147 seconds; current allocated memory: 0.000 MB.
+Pre-synthesis failed.
+    while executing
+"source G:/Doctor/AMD_AECG_Summer_School_Projects-main/fast/SummerCamp/solution1/csynth.tcl"
+    invoked from within
+"hls::main G:/Doctor/AMD_AECG_Summer_School_Projects-main/fast/SummerCamp/solution1/csynth.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$newargs"
+    (procedure "hls_proc" line 16)
+    invoked from within
+"hls_proc [info nameofexecutable] $argv"
+INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 2 seconds. Total elapsed time: 14.399 seconds; peak allocated memory: 1.234 GB.
